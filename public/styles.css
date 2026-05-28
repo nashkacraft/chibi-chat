@@ -88,9 +88,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 8%;
-  /* increased size by ~25% for stronger presence */
-  width: 53%;
-  max-width: 650px;
+  width: 58%;
+  max-width: 720px;
 }
 .character {
   width: 100%;
@@ -136,8 +135,7 @@ body {
   .character-area {
     left: 50%;
     transform: translateX(-50%);
-    /* mobile increased as well */
-    width: 60%;
+    width: 66%;
     bottom: 22%;
   }
   .dialogue-text {
