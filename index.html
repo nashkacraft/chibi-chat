@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chibi Chat - School Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-root">
+      <header class="topbar">
+        <h1>Chibi Chat</h1>
+        <div class="controls">
+          <div id="friendship" class="friendship" aria-hidden="false">
+            <div class="friendship-label">Friendship</div>
+            <div class="friendship-bar">
+              <div id="friendshipFill" class="friendship-fill"></div>
+            </div>
+            <div id="friendshipValue" class="friendship-value">50</div>
+          </div>
+          <button id="replayBtn">Replay</button>
+        </div>
+      </header>
+
+      <section class="scene">
+        <img id="background" class="background" alt="background" src="assets/background.jpg" />
+
+        <div class="character-area">
+          <img id="character" class="character" alt="chibi character" src="assets/normal.png" />
+        </div>
+
+        <div class="dialogue">
+          <div id="dialogueText" class="dialogue-text" aria-live="polite"></div>
+          <div id="choices" class="choices" role="list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

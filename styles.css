@@ -1,0 +1,161 @@
+:root {
+  --bg-color: rgba(255, 255, 255, 0.9);
+  --dialog-bg: rgba(0, 0, 0, 0.6);
+  --accent: #ff7aa2;
+  --text: #111;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #000;
+  color: var(--text);
+  min-height: 100vh;
+}
+.game-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent);
+  color: white;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.friendship {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 6px;
+}
+.friendship-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.friendship-bar {
+  width: 120px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.friendship-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #ffb3d1);
+  width: 50%;
+  transition: width 0.25s ease;
+}
+.friendship-value {
+  min-width: 28px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+.scene {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+.character-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8%;
+  width: 58%;
+  max-width: 720px;
+}
+.character {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.dialogue {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.15));
+}
+.dialogue-text {
+  background: var(--dialog-bg);
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 48px;
+}
+.choices {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.choices button {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  border: 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.choices button:focus {
+  outline: 3px solid rgba(255, 122, 162, 0.35);
+}
+
+@media (max-width: 700px) {
+  .character-area {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66%;
+    bottom: 22%;
+  }
+  .dialogue-text {
+    font-size: 0.95rem;
+  }
+  .topbar h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Simple emotion classes for small visual tweaks */
+.character.happy {
+  transform: translateY(-4px);
+}
+.character.sad {
+  filter: grayscale(0.3) contrast(0.9);
+}
+.character.angry {
+  transform: translateX(6px);
+}
+.character.smirk {
+  transform: rotate(-2deg);
+}
