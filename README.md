@@ -9,7 +9,7 @@ Quick start (development)
 1. Install dev tools (Prettier, ESLint):
 
 ```bash
-cd /home/nashkacraft/Projects/school
+cd <repo-folder>
 npm install
 ```
 
@@ -31,6 +31,27 @@ Dev helpers
 - `npm run format` - runs Prettier across HTML/CSS/JS/JSON/MD.
 - `npm run lint` - runs ESLint on the repository JS files.
   Note: `task/assets/` was used during initial implementation; current `public/assets/` contains the images used by the playable site. There is no `prepare` script anymore.
+
+  Deploying to GitHub Pages
+
+  This repository includes a GitHub Actions workflow that automatically publishes the `public/` folder to the `gh-pages` branch whenever you push to `main`. No extra setup is required beyond pushing your code to GitHub.
+
+  - To deploy manually (one-off), you can use `git subtree` or `npx gh-pages`:
+
+  ```bash
+  # push public/ as the gh-pages branch (one-time)
+  git subtree push --prefix public origin gh-pages
+
+  # or with npx:
+  npx gh-pages -d public
+  ```
+
+  - To use the included automatic deploy (preferred):
+    1. Push your repository to GitHub (branch `main`).
+    2. Wait a minute for the Actions workflow to run. It will publish `public/` to `gh-pages`.
+    3. Your site will be available at `https://<username>.github.io/<repo>/` (replace with your GitHub username and repo name).
+
+  If you want a custom domain, configure it in your repository Pages settings after the first publish.
 
 Project layout (important files)
 
