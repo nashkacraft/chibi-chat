@@ -1,0 +1,69 @@
+{
+  "start": "start",
+  "nodes": [
+    {
+      "id": "start",
+      "text": "Hi there! I'm Kiko. Wanna chat for a bit?",
+      "choices": [
+        {
+          "id": "c1",
+          "text": "You're cute! (compliment)",
+          "friendshipDelta": 15,
+          "emotion": "veryhappy",
+          "nextId": "hobby"
+        },
+        {
+          "id": "c2",
+          "text": "Sure — tell me about yourself.",
+          "friendshipDelta": 5,
+          "emotion": "happy",
+          "nextId": "hobby"
+        },
+        {
+          "id": "c3",
+          "text": "I bet you're secretly a robot.",
+          "friendshipDelta": -10,
+          "emotion": "smirk",
+          "nextId": "hobby"
+        }
+      ]
+    },
+    {
+      "id": "hobby",
+      "text": "I like drawing and tea. What about you?",
+      "choices": [
+        {
+          "id": "c4",
+          "text": "I love drawing too!",
+          "friendshipDelta": 20,
+          "emotion": "veryhappy",
+          "nextId": "end"
+        },
+        {
+          "id": "c5",
+          "text": "Tea's nice. I prefer coffee.",
+          "friendshipDelta": 0,
+          "emotion": "happy",
+          "nextId": "end"
+        },
+        {
+          "id": "c6",
+          "text": "That's boring...",
+          "friendshipDelta": -20,
+          "emotion": "sad",
+          "nextId": "end"
+        }
+      ]
+    },
+    {
+      "id": "end",
+      "text": "",
+      "choices": [],
+      "endings": {
+        "good": "Kiko beams: \"I had so much fun! Let's hang out again soon.\"",
+        "neutral": "Kiko smiles politely: \"It was nice talking to you. See you around.\"",
+        "bad": "Kiko looks away: \"Oh... okay. Maybe another time.\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+node_modules/
+npm-debug.log*
+.DS_Store
+.env
+.cache/
+.idea/
+.vscode/
+coverage/
+dist/
+build/
+task/
+*.log
+/.parcel-cache
+yarn-error.log
