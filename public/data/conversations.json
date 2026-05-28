@@ -23,7 +23,7 @@
         {
           "id": "c3",
           "text": "Not really, sorry.",
-          "friendshipDelta": -10,
+          "friendshipDelta": -50,
           "emotion": "sad",
           "nextId": "polite_end"
         }
@@ -31,26 +31,26 @@
     },
     {
       "id": "ask_how",
-      "text": "I'm feeling excited today because I finished a drawing. How about you?",
+      "text": "I'm feeling excited today because I finished my drawing!",
       "choices": [
         {
           "id": "c4",
           "text": "That's awesome, show me!",
-          "friendshipDelta": 15,
+          "friendshipDelta": 20,
           "emotion": "veryhappy",
           "nextId": "show_art"
         },
         {
           "id": "c5",
           "text": "Nice, congrats!",
-          "friendshipDelta": 8,
+          "friendshipDelta": 5,
           "emotion": "happy",
           "nextId": "hobby_discuss"
         },
         {
           "id": "c6",
-          "text": "I don't care about art.",
-          "friendshipDelta": -15,
+          "text": "I don't care about your drawing..",
+          "friendshipDelta": -50,
           "emotion": "angry",
           "nextId": "hobby_discuss"
         }
@@ -58,12 +58,12 @@
     },
     {
       "id": "show_art",
-      "text": "Kiko blushes and shows a tiny sketch. It's cute! Do you like drawing too?",
+       "text": "Kiko blushes and shows a tiny sketch. It looks cute, right? Do you like drawing too?",
       "choices": [
         {
           "id": "c7",
           "text": "Yes, I draw sometimes.",
-          "friendshipDelta": 12,
+          "friendshipDelta": 20,
           "emotion": "talk2",
           "nextId": "hobby_discuss"
         },
@@ -76,8 +76,8 @@
         },
         {
           "id": "c9",
-          "text": "It's... okay.",
-          "friendshipDelta": -2,
+          "text": "It looks... okay. I don't really like drawing though..",
+          "friendshipDelta": -10,
           "emotion": "confusion",
           "nextId": "hobby_discuss"
         }
@@ -103,7 +103,7 @@
         },
         {
           "id": "c12",
-          "text": "I like exploring strange things... want to hear a secret?",
+          "text": "I like exploring... by the way, want to hear a secret?",
           "friendshipDelta": 20,
           "emotion": "creepy",
           "nextId": "secret_path",
@@ -118,21 +118,21 @@
         {
           "id": "c13",
           "text": "I like shy characters.",
-          "friendshipDelta": 8,
+          "friendshipDelta": 5,
           "emotion": "smirk",
           "nextId": "deeper_2"
         },
         {
           "id": "c14",
           "text": "I like bold heroes.",
-          "friendshipDelta": 6,
+          "friendshipDelta": 10,
           "emotion": "happy",
           "nextId": "deeper_2"
         },
         {
           "id": "c15",
           "text": "I prefer slice-of-life stuff.",
-          "friendshipDelta": 5,
+          "friendshipDelta": -5,
           "emotion": "talk1",
           "nextId": "deeper_2"
         }
@@ -140,18 +140,18 @@
     },
     {
       "id": "deeper_2",
-      "text": "We chat about stories for a while, Kiko seems to relax. Do you want to trade recommendations?",
+      "text": "We chat about stories for a while, Kiko seems to relax. Do you want to know her better?",
       "choices": [
         {
           "id": "c16",
-          "text": "Yes, let's exchange favourites.",
+          "text": "Let's exchange favourites.",
           "friendshipDelta": 12,
           "emotion": "veryhappy",
           "nextId": "deep_end"
         },
         {
           "id": "c17",
-          "text": "Maybe later, busy now.",
+          "text": "Maybe later, I have to go now.",
           "friendshipDelta": -5,
           "emotion": "uncomfortable",
           "nextId": "polite_end"
@@ -160,19 +160,19 @@
     },
     {
       "id": "secret_path",
-      "text": "Kiko's eyes shine: 'A secret? Tell me.' She leans closer, whispering something strange.",
+      "text": "Kiko's eyes shine: 'A secret? Tell me!' She leans closer, eager to hear this secret of yours.",
       "choices": [
         {
           "id": "c18",
-          "text": "Tell me the secret.",
-          "friendshipDelta": 10,
+          "text": "I want you to be my friend.",
+          "friendshipDelta": 100,
           "emotion": "creepy",
           "nextId": "deep_secret"
         },
         {
           "id": "c19",
-          "text": "Maybe not, that's weird.",
-          "friendshipDelta": -8,
+          "text": "Uhh.. I changed my mind...",
+          "friendshipDelta": -100,
           "emotion": "confusion",
           "nextId": "polite_end"
         }
@@ -180,20 +180,20 @@
     },
     {
       "id": "deep_secret",
-      "text": "Kiko giggles and offers a tiny, odd charm. You feel a little different.",
+      "text": "Kiko smiles.",
       "choices": [
         {
           "id": "c20",
-          "text": "I accept the charm.",
-          "friendshipDelta": 20,
+          "text": "I want to be your friend!!!",
+          "friendshipDelta": 100,
           "emotion": "veryhappy",
           "nextId": "deep_end"
         },
         {
           "id": "c21",
-          "text": "I politely refuse.",
-          "friendshipDelta": -5,
-          "emotion": "sad",
+          "text": "I.. um.. nevermind.",
+          "friendshipDelta": -50,
+          "emotion": "uncomfortable",
           "nextId": "polite_end"
         }
       ]
@@ -205,7 +205,7 @@
       "endings": {
         "bad": "Kiko seems distant, maybe next time you'll connect more.",
         "neutral": "Kiko smiles politely: 'It was nice talking.'",
-        "good": "Kiko beams: 'I had a lovely time! Let's chat again.'",
+        "good": "Kiko beams: 'I had a lovely time! Let's chat again soon.'",
         "best": "Kiko hugs you: 'You're my best friend now!'",
         "secret": "The charm glows, Kiko reveals a secret world only you both can see."
       }
