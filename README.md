@@ -13,17 +13,15 @@ cd /home/nashkacraft/Projects/school
 npm install
 ```
 
-2. Prepare public assets and serve the site locally:
+2. Serve the site locally:
 
 ```bash
-npm run prepare   # copies task/assets -> public/assets
-npm run start     # runs prepare and serves public/ at http://localhost:8000
+npm run start     # serves public/ at http://localhost:8000
 ```
 
 Alternative (serve manually):
 
 ```bash
-npm run prepare
 python3 -m http.server 8000 --directory public
 # open http://localhost:8000
 ```
@@ -32,7 +30,7 @@ Dev helpers
 
 - `npm run format` - runs Prettier across HTML/CSS/JS/JSON/MD.
 - `npm run lint` - runs ESLint on the repository JS files.
-- `npm run prepare` - copies `task/assets/*` into `public/assets/` (safe source-of-truth kept in `task/`).
+  Note: `task/assets/` was used during initial implementation; current `public/assets/` contains the images used by the playable site. There is no `prepare` script anymore.
 
 Project layout (important files)
 

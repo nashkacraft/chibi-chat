@@ -58,7 +58,7 @@
     },
     {
       "id": "show_art",
-       "text": "Kiko blushes and shows a tiny sketch. It looks cute, right? Do you like drawing too?",
+      "text": "Kiko blushes and shows a tiny sketch. It looks cute, right? Do you like drawing too?",
       "choices": [
         {
           "id": "c7",

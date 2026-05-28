@@ -9,7 +9,6 @@
   "scripts": {
     "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
     "lint": "eslint . --ext .js",
-    "prepare": "mkdir -p public/assets && cp -r task/assets/* public/assets/ || true",
-    "start": "npm run prepare && python3 -m http.server 8000 --directory public"
+    "start": "python3 -m http.server 8000 --directory public"
   }
 }
