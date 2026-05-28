@@ -1,4 +1,4 @@
-# Chibi Chat — School Project
+# Chibi Chat - School Project
 
 Small browser game (HTML/CSS/JavaScript) where the player chats with a chibi character. Choices affect the character's emotion and a `friendship` score which produces one of multiple endings. The playable site is in `public/`; original assets are kept in `task/assets/`.
 
@@ -30,9 +30,9 @@ python3 -m http.server 8000 --directory public
 
 Dev helpers
 
-- `npm run format` — runs Prettier across HTML/CSS/JS/JSON/MD.
-- `npm run lint` — runs ESLint on the repository JS files.
-- `npm run prepare` — copies `task/assets/*` into `public/assets/` (safe source-of-truth kept in `task/`).
+- `npm run format` - runs Prettier across HTML/CSS/JS/JSON/MD.
+- `npm run lint` - runs ESLint on the repository JS files.
+- `npm run prepare` - copies `task/assets/*` into `public/assets/` (safe source-of-truth kept in `task/`).
 
 Project layout (important files)
 

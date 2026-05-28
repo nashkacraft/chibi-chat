@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Chibi Chat — School Project</title>
+    <title>Chibi Chat - School Project</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,6 +11,13 @@
       <header class="topbar">
         <h1>Chibi Chat</h1>
         <div class="controls">
+          <div id="friendship" class="friendship" aria-hidden="false">
+            <div class="friendship-label">Friendship</div>
+            <div class="friendship-bar">
+              <div id="friendshipFill" class="friendship-fill"></div>
+            </div>
+            <div id="friendshipValue" class="friendship-value">50</div>
+          </div>
           <button id="replayBtn">Replay</button>
         </div>
       </header>

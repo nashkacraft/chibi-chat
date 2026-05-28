@@ -36,6 +36,40 @@ body {
   margin: 0;
   font-size: 1.1rem;
 }
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.friendship {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 6px;
+}
+.friendship-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.friendship-bar {
+  width: 120px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.friendship-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #ffb3d1);
+  width: 50%;
+  transition: width 0.25s ease;
+}
+.friendship-value {
+  min-width: 28px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
 .scene {
   position: relative;
   flex: 1;
@@ -51,10 +85,11 @@ body {
 }
 .character-area {
   position: absolute;
-  left: 6%;
-  bottom: 18%;
-  width: 28%;
-  max-width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  width: 42%;
+  max-width: 520px;
 }
 .character {
   width: 100%;
@@ -100,7 +135,7 @@ body {
   .character-area {
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 48%;
     bottom: 22%;
   }
   .dialogue-text {
